@@ -3,7 +3,12 @@ div {
     padding: 15px;
     text-align: center;
 }
-input[type="radio"]{
+/* 
+ */
+.question {
+    margin: 10px 0 10px 0;
+}
+ #answer {
     margin: 0 15px 0 15px;
-  }
+}
 
