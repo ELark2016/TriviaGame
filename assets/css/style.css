@@ -38,10 +38,11 @@ div {
     width: 300px;
     height: 100px;
 }
-#center-finish {
+.center-finish {
     background: white;
     position: relative;
     top: 150px;
     width: 700px;
+    margin: auto;
 }
 

@@ -1,12 +1,10 @@
-var time = 10;
+var time = 15;
 var correctAnswer = 0;  
 var incorrectAnswer = 0; 
 var unanswered = 0;
+var final;
 
 var timer = setInterval (decrement, 1000);
-
-
-
 
 function decrement () {
         $("#time-left").html(time);
@@ -15,10 +13,9 @@ function decrement () {
             if (time === 0) {
                 clearInterval(timer);
                 checkAnswers ();
-                window.location.replace("finish.html");
+                final;
             }
     }
-
 function checkAnswers () {
     var selValue = $("#answer").val();    
         for(var i = 1; i <= 8; i++) { 
@@ -27,7 +24,6 @@ function checkAnswers () {
                 var radio = radios[j];
                 if(radio.value == "correct" && radio.checked) {
                     correctAnswer ++;
-                    right = correctAnswer;
                 }
                 if(radio.value == "wrong" && radio.checked) {
                     incorrectAnswer ++;
@@ -38,16 +34,18 @@ function checkAnswers () {
                 
             }
         } 
+         
 console.log("Correct: " + correctAnswer);
 console.log("Wrong: " + incorrectAnswer);
 console.log("No Answer: " + unanswered);
+$("#correct-answers").append(correctAnswer);
+$("#incorrect-answers").append(incorrectAnswer);
+$("#unanswered").append(unanswered);
 }
 
-$("#done-button").click(function() {
-    window.location.replace("finish.html");
-    
-});
+
 
 // figure out how to get the final results for answers to show up in finish page results
 //finish page is reading the globally declared variables; maybe need to push to an array
 // or convert to a string somehow so that results will show on page? 
+//Figure out how to make github start on the start page (vs the index.html page)
