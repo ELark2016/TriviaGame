@@ -2,9 +2,35 @@ var time = 15;
 var correctAnswer = 0;  
 var incorrectAnswer = 0; 
 var unanswered = 0;
+var timer;
 
-var timer = setInterval (decrement, 1000);
+
+$(".center-start").show();
 $(".center-finish").hide();
+$(".top").hide();
+$("form").hide();
+
+$("#start-button").click(function() {
+    event.preventDefault();
+    $(".center-start").hide();
+    $("#start-button").hide();
+    $(".top").show();
+    $("form").show();
+    timer = setInterval (decrement, 1000);
+  });
+
+  $("#done-button").click(function() {
+    event.preventDefault();
+    $(".center-start").hide();
+    $("#start-button").hide();
+    $(".top").hide();
+    $("form").hide();
+    checkAnswers();
+    clearInterval(timer);
+    $(".center-finish").show();
+
+    
+  });
 
 function decrement () {
         $("#time-left").html(time);
@@ -15,7 +41,7 @@ function decrement () {
                 checkAnswers ();
                 $(".center-finish").show();
                 $("form").hide();
-                
+                $(".top").hide();
             }
     }
 function checkAnswers () {

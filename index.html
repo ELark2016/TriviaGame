@@ -9,8 +9,64 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container" id="center-start">
-        <button type="submit" id="start-button" onclick="window.location.replace('start.html')">Start</button>   
+    <div class="container">
+        <div class="container" id="center-start">
+                <button id="start-button">Start</button>   
+        </div>
+        <div class="top">
+            <h1>Food Trivia!</h1>
+            <h3>Time Remaining:</h3><div id="time-left"></div>
+        </div>
+        <form>
+            <div class="question">Sriracha is type of hot sauce named after a city located in what country?</div>
+                <input id="answer" type="radio" name="group1" value="correct"> Thailand
+                <input id="answer" type="radio" name="group1" value="wrong"> Japan
+                <input id="answer" type="radio" name="group1" value="wrong"> Korea 
+                <input id="answer" type="radio" name="group1" value="wrong"> Jamaica 
+            <div class="question">Malbec, Sangiovese, and Syrah are all a type of what?</div>
+                <input id="answer" type="radio" name="group2" value="correct"> Wine    
+                <input id="answer" type="radio" name="group2" value="wrong"> Fish
+                <input id="answer" type="radio" name="group2" value="wrong"> Cheese
+                <input id="answer" type="radio" name="group2" value="wrong"> Grains
+            <div class="question">What common kitchen item is made up of sodium and chlorine atoms?</div>
+                <input id="answer" type="radio" name="group3" value="correct"> Salt
+                <input id="answer" type="radio" name="group3" value="wrong"> Pepper
+                <input id="answer" type="radio" name="group3" value="wrong"> Dish Soap
+                <input id="answer" type="radio" name="group3" value="wrong"> Bleach
+            <div class="question">In which country did cheddar cheese originate?</div>
+                <input id="answer" type="radio" name="group4" value="correct"> England
+                <input id="answer" type="radio" name="group4" value="wrong"> The United States of America
+                <input id="answer" type="radio" name="group4" value="wrong"> France
+                <input id="answer" type="radio" name="group4" value="wrong"> Ireland
+            <div class="question">What was the original flavor of the filling in Twinkies?</div>
+                <input id="answer" type="radio" name="group5" value="correct"> Banana
+                <input id="answer" type="radio" name="group5" value="wrong"> Vanilla
+                <input id="answer" type="radio" name="group5" value="wrong"> Chocolate
+                <input id="answer" type="radio" name="group5" value="wrong"> Strawberry
+            <div class="question">What dish, made from crushed durum wheat, is a staple of western North Africa?</div>
+                <input id="answer" type="radio" name="group6" value="correct"> Couscous
+                <input id="answer" type="radio" name="group6" value="wrong"> Quinoa
+                <input id="answer" type="radio" name="group6" value="wrong"> Fufu
+                <input id="answer" type="radio" name="group6" value="wrong"> Mofongo
+            <div class="question">The first McDonald's restaurant openend in which U.S. state?</div>
+                <input id="answer" type="radio" name="group7" value="correct"> California
+                <input id="answer" type="radio" name="group7" value="wrong"> Washington
+                <input id="answer" type="radio" name="group7" value="wrong"> Nevada
+                <input id="answer" type="radio" name="group7" value="wrong"> New York
+            <div class="question">Pupusas, handmade thick stuffed corn tortillas, are a traditional dish from what country?</div>
+                <input id="answer" type="radio" name="group8" value="correct"> El Salvador
+                <input id="answer" type="radio" name="group8" value="wrong"> Guatamala
+                <input id="answer" type="radio" name="group8" value="wrong"> Mexico
+                <input id="answer" type="radio" name="group8" value="wrong"> Venezuela
+            <div><button id="done-button">Done</button></div>
+        </form>
+            <div class="center-finish">
+                <h2>Food Trivia Results!</h2>
+                <p class="final-answers" id="correct-answers">Correct Answers: </p>
+                <p class="final-answers" id="incorrect-answers">Incorrect Answers: </p>
+                <p class="final-answers" id="unanswered">Unanswered: </p>
+            </div>
     </div> 
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
